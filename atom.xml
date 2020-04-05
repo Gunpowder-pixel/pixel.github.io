@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Gunpowder-pixel.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-04-05T07:18:14.408Z</updated>
+    <title>O₂</title>
+    <updated>2020-04-05T07:26:20.826Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Gunpowder-pixel.github.io"/>
     <link rel="self" href="https://Gunpowder-pixel.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>世事一场大梦，人生几度秋凉</subtitle>
     <logo>https://Gunpowder-pixel.github.io/images/avatar.png</logo>
     <icon>https://Gunpowder-pixel.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, O₂</rights>
     <entry>
         <title type="html"><![CDATA[Text]]></title>
         <id>https://Gunpowder-pixel.github.io/post/text/</id>
