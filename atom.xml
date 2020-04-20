@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Gunpowder-pixel.github.io</id>
     <title>人马座</title>
-    <updated>2020-04-07T15:23:27.380Z</updated>
+    <updated>2020-04-20T13:48:31.142Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Gunpowder-pixel.github.io"/>
     <link rel="self" href="https://Gunpowder-pixel.github.io/atom.xml"/>
@@ -10,6 +10,104 @@
     <logo>https://Gunpowder-pixel.github.io/images/avatar.png</logo>
     <icon>https://Gunpowder-pixel.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 人马座</rights>
+    <entry>
+        <title type="html"><![CDATA[看Youtube需要的速度]]></title>
+        <id>https://Gunpowder-pixel.github.io/post/kan-youtube-xu-yao-de-su-du/</id>
+        <link href="https://Gunpowder-pixel.github.io/post/kan-youtube-xu-yao-de-su-du/">
+        </link>
+        <updated>2020-04-20T13:47:39.000Z</updated>
+        <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th style="text-align:center">Name</th>
+<th style="text-align:center">8K@60</th>
+<th style="text-align:center">8K@30</th>
+<th style="text-align:center">4K@60</th>
+<th style="text-align:center">4K@30</th>
+<th style="text-align:center">1080@60</th>
+<th style="text-align:center">1080@30</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Width</td>
+<td style="text-align:center">7680</td>
+<td style="text-align:center">7680</td>
+<td style="text-align:center">3840</td>
+<td style="text-align:center">3840</td>
+<td style="text-align:center">1920</td>
+<td style="text-align:center">1920</td>
+</tr>
+<tr>
+<td style="text-align:center">Height</td>
+<td style="text-align:center">4320</td>
+<td style="text-align:center">4320</td>
+<td style="text-align:center">2160</td>
+<td style="text-align:center">2160</td>
+<td style="text-align:center">1080</td>
+<td style="text-align:center">1080</td>
+</tr>
+<tr>
+<td style="text-align:center">Depth</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">24</td>
+</tr>
+<tr>
+<td style="text-align:center">Fps</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">30</td>
+</tr>
+<tr>
+<td style="text-align:center">Bit</td>
+<td style="text-align:center">47,775,744,000</td>
+<td style="text-align:center">23,887,872,000</td>
+<td style="text-align:center">11,943,936,000</td>
+<td style="text-align:center">5,971,968,000</td>
+<td style="text-align:center">2,985,984,000</td>
+<td style="text-align:center">1,492,992,000</td>
+</tr>
+<tr>
+<td style="text-align:center">Kbps</td>
+<td style="text-align:center">46,656,000</td>
+<td style="text-align:center">23,328,000</td>
+<td style="text-align:center">11,664,000</td>
+<td style="text-align:center">5,832,000</td>
+<td style="text-align:center">2,916,000</td>
+<td style="text-align:center">1,458,000</td>
+</tr>
+<tr>
+<td style="text-align:center">Rate</td>
+<td style="text-align:center">2000</td>
+<td style="text-align:center">900</td>
+<td style="text-align:center">400</td>
+<td style="text-align:center">300</td>
+<td style="text-align:center">400</td>
+<td style="text-align:center">300</td>
+</tr>
+<tr>
+<td style="text-align:center">Kbps</td>
+<td style="text-align:center">23,328</td>
+<td style="text-align:center">25,920</td>
+<td style="text-align:center">29,160</td>
+<td style="text-align:center">19,440</td>
+<td style="text-align:center">7,290</td>
+<td style="text-align:center">4,860</td>
+</tr>
+</tbody>
+</table>
+<h3 id="理论来说-youtube速度超过3w-就能正常流畅播放所有视频">理论来说 Youtube速度超过3W 就能正常流畅播放所有视频</h3>
+<p>数据引用于<code>eSir PlayGround</code>的视频<br>
+<a href="https://www.youtube.com/watch?v=ZcvdUFZYoDI">视频链接</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[封面生成网站]]></title>
         <id>https://Gunpowder-pixel.github.io/post/feng-mian-sheng-cheng-wang-zhan/</id>
