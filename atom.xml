@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Gunpowder-pixel.github.io</id>
     <title>人马座</title>
-    <updated>2020-04-20T13:48:31.142Z</updated>
+    <updated>2020-04-23T08:55:39.517Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Gunpowder-pixel.github.io"/>
     <link rel="self" href="https://Gunpowder-pixel.github.io/atom.xml"/>
@@ -10,6 +10,29 @@
     <logo>https://Gunpowder-pixel.github.io/images/avatar.png</logo>
     <icon>https://Gunpowder-pixel.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 人马座</rights>
+    <entry>
+        <title type="html"><![CDATA[G-Core的机房测试IP]]></title>
+        <id>https://Gunpowder-pixel.github.io/post/g-core-de-ji-fang-ce-shi-ip/</id>
+        <link href="https://Gunpowder-pixel.github.io/post/g-core-de-ji-fang-ce-shi-ip/">
+        </link>
+        <updated>2020-04-23T08:54:48.000Z</updated>
+        <content type="html"><![CDATA[<p>荷兰（阿姆斯特丹）：92.38.186.2<br>
+阿什本：92.223.83.2<br>
+芝加哥：92.38.177.2<br>
+迈阿密：92.223.66.3<br>
+圣克拉拉：92.38.148.2<br>
+莫斯科：92.223.103.3<br>
+伯力（Khabarovsk）：92.223.80.3<br>
+克拉斯诺亚尔斯克边疆区（Krasnoyarsk）：92.223.87.2<br>
+叶卡捷琳堡（Yekaterinburg）：92.223.91.2<br>
+卢森堡公国：92.223.88.2<br>
+圣保罗：5.188.238.2<br>
+首尔：92.223.73.2<br>
+新加坡：92.223.86.2<br>
+悉尼：146.185.236.2<br>
+东京：5.188.71.3</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[看Youtube需要的速度]]></title>
         <id>https://Gunpowder-pixel.github.io/post/kan-youtube-xu-yao-de-su-du/</id>
