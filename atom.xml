@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Gunpowder-pixel.github.io</id>
     <title>人马座</title>
-    <updated>2020-04-23T09:10:31.764Z</updated>
+    <updated>2020-04-23T09:43:26.968Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Gunpowder-pixel.github.io"/>
     <link rel="self" href="https://Gunpowder-pixel.github.io/atom.xml"/>
@@ -11,9 +11,59 @@
     <icon>https://Gunpowder-pixel.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 人马座</rights>
     <entry>
+        <title type="html"><![CDATA[PS简单修复皮肤泛油和泛光]]></title>
+        <id>https://Gunpowder-pixel.github.io/post/4/</id>
+        <link href="https://Gunpowder-pixel.github.io/post/4/">
+        </link>
+        <updated>2020-04-23T09:36:51.000Z</updated>
+        <content type="html"><![CDATA[<p>1.新建图层，在新建图层上用吸管工具吸取皮肤颜色，再使用画笔工具   模式：变暗    不透明度：10%-15%<br>
+在图层上用画笔工具把泛光或斑点抹去</p>
+<p>2.第1项完成后，再次新建图层，用相同的画笔给整张脸涂抹美白，完成后给该图层添加图层蒙版，使用黑色画笔<br>
+在图层蒙版上把眼睛、眉毛、嘴巴等部位涂出来，画笔工具  模式：正常    不透明度：100%<br>
+涂抹眉毛时可将画笔不透明度调至30%-40%</p>
+<p>3.最后将图层的不透明度降低到30%-40%，以最小化肤色</p>
+<p>完成</p>
+<hr>
+<p>另一种方法</p>
+<ol>
+<li>复制图层  CTRL+J</li>
+<li>拷贝一个通道蓝</li>
+<li>选择通道蓝   滤镜--其他--高反差保留 半径：20-30像素</li>
+<li>图像--应用图像 强光 不透明度100% 重复3次</li>
+<li>选中通道蓝 拷贝的选区  CTRL+左键</li>
+<li>反向选区  CTRL+SHIFT+I</li>
+<li>选中第一步复制的图层，添加一个曲线，打开黑白图层调整曲线</li>
+<li>盖印曲线图层  CTRL+SHIFT+ALT+E</li>
+<li>滤镜--杂色--减少杂色</li>
+<li>上图层蒙版，把五官涂抹出来</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">减少杂色设置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">强度：10</td>
+</tr>
+<tr>
+<td style="text-align:center">保留细节：0</td>
+</tr>
+<tr>
+<td style="text-align:center">减少杂色：100</td>
+</tr>
+<tr>
+<td style="text-align:center">锐化细节：0</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[G-Core的机房测试IP]]></title>
-        <id>https://Gunpowder-pixel.github.io/post/g-core-de-ji-fang-ce-shi-ip/</id>
-        <link href="https://Gunpowder-pixel.github.io/post/g-core-de-ji-fang-ce-shi-ip/">
+        <id>https://Gunpowder-pixel.github.io/post/3/</id>
+        <link href="https://Gunpowder-pixel.github.io/post/3/">
         </link>
         <updated>2020-04-23T08:54:48.000Z</updated>
         <content type="html"><![CDATA[<p>荷兰（阿姆斯特丹）：92.38.186.2<br>
@@ -35,8 +85,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[看Youtube需要的速度]]></title>
-        <id>https://Gunpowder-pixel.github.io/post/kan-youtube-xu-yao-de-su-du/</id>
-        <link href="https://Gunpowder-pixel.github.io/post/kan-youtube-xu-yao-de-su-du/">
+        <id>https://Gunpowder-pixel.github.io/post/2/</id>
+        <link href="https://Gunpowder-pixel.github.io/post/2/">
         </link>
         <updated>2020-04-20T13:47:39.000Z</updated>
         <content type="html"><![CDATA[<table>
@@ -133,8 +183,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[封面生成网站]]></title>
-        <id>https://Gunpowder-pixel.github.io/post/feng-mian-sheng-cheng-wang-zhan/</id>
-        <link href="https://Gunpowder-pixel.github.io/post/feng-mian-sheng-cheng-wang-zhan/">
+        <id>https://Gunpowder-pixel.github.io/post/1/</id>
+        <link href="https://Gunpowder-pixel.github.io/post/1/">
         </link>
         <updated>2020-04-07T15:13:42.000Z</updated>
         <content type="html"><![CDATA[<p>在网上Gridea的TG群组里发现的一个有趣项目<br>
@@ -369,38 +419,6 @@ c-1 5-5 9-11 9h-2L532 67 19 159h-2c-5 0-9-4-11-9l-5-22c-1-6 2-12 8-13z'/></svg><
 </li>
 </ol>
 </section>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://Gunpowder-pixel.github.io/post/hello-gridea/</id>
-        <link href="https://Gunpowder-pixel.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>
