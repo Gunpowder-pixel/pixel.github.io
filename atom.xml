@@ -1,15 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Gunpowder-pixel.github.io</id>
-    <title>人马座</title>
-    <updated>2020-04-24T04:43:57.162Z</updated>
+    <title>太空排骨</title>
+    <updated>2020-04-25T10:33:54.448Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Gunpowder-pixel.github.io"/>
     <link rel="self" href="https://Gunpowder-pixel.github.io/atom.xml"/>
     <subtitle>&lt;b&gt;世事一场大梦，人生几度秋凉&lt;/b&gt;</subtitle>
     <logo>https://Gunpowder-pixel.github.io/images/avatar.png</logo>
     <icon>https://Gunpowder-pixel.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 人马座</rights>
+    <rights>All rights reserved 2020, 太空排骨</rights>
+    <entry>
+        <title type="html"><![CDATA[ServerStatus-Hotaru 云探针]]></title>
+        <id>https://Gunpowder-pixel.github.io/post/1OvUmBhAg/</id>
+        <link href="https://Gunpowder-pixel.github.io/post/1OvUmBhAg/">
+        </link>
+        <updated>2020-04-25T09:51:48.000Z</updated>
+        <content type="html"><![CDATA[<p>教程就是从可乐那搬运过来的，我就是搬运社社长！<a href="https://www.cokemine.com/serverstatus-hotaru.html">可乐博客地址</a></p>
+<p>项目地址：<a href="https://github.com/CokeMine/ServerStatus-Hotaru">ServerStatus-Hotaru</a></p>
+<p>脚本来自<a href="https://www.aptx.xin/serverstatus-hotaru.html">APTX</a></p>
+<hr>
+<h2 id="服务端">服务端</h2>
+<p>安装</p>
+<pre><code>wget https://raw.githubusercontent.com/CokeMine/ServerStatus-Hotaru/master/status.sh
+bash status.sh s
+</code></pre>
+<h2 id="客户端">客户端</h2>
+<p>安装</p>
+<pre><code>bash status.sh c
+</code></pre>
+<p>配置文件路径：<code>/usr/local/ServerStatus/server/config.json</code></p>
+<p>监控本机就IP就填 127.0.0.1，有IPv6就是 ::1</p>
+<p>服务端更新了数据需重启服务端</p>
+<p>服务端安装时可以不用自动配置candy，有宝塔直接把网站目录指向 <code>/usr/local/ServerStatus/web</code> 即可</p>
+<h2 id="相关开源项目">相关开源项目：</h2>
+<ul>
+<li>ServerStatus-Toyo：<a href="https://github.com/ToyoDAdoubiBackup/ServerStatus-Toyo">https://github.com/ToyoDAdoubiBackup/ServerStatus-Toyo</a></li>
+<li>ServerStatus：<a href="https://github.com/BotoX/ServerStatus">https://github.com/BotoX/ServerStatus</a></li>
+<li>mojeda's ServerStatus: <a href="https://github.com/mojeda/ServerStatus">https://github.com/mojeda/ServerStatus</a></li>
+<li>BlueVM's project: <a href="http://www.lowendtalk.com/discussion/comment/169690#Comment_169690">http://www.lowendtalk.com/discussion/comment/169690#Comment_169690</a></li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[脚本 测试你到数据中心的速度]]></title>
+        <id>https://Gunpowder-pixel.github.io/post/sxAtIE7wY/</id>
+        <link href="https://Gunpowder-pixel.github.io/post/sxAtIE7wY/">
+        </link>
+        <updated>2020-04-25T03:15:14.000Z</updated>
+        <content type="html"><![CDATA[<p>通过duang知道了这个有趣的项目，可以测试你到各个IDC之间的速度，节省时间</p>
+<p>Github:<a href="https://github.com/Spedoske/DataCenterSpeedtest-cli">DataCenterSpeedtest-cli</a></p>
+<p>一般来说是在本机运行测速，当然 也可以在中转机上运行测速</p>
+<h2 id="先安装python3请使用python-36或以下版本37以上无法测试https节点的链接和pip3">先安装python3(请使用python 3.6或以下版本，3.7以上无法测试https节点的链接)和pip3</h2>
+<p>CentOS</p>
+<pre><code>yum -y install python3
+yum -y install python3-pip
+</code></pre>
+<p>Debian/Ubuntu</p>
+<pre><code>sudo apt-get install python3
+sudo apt-get install python3-pip
+</code></pre>
+<p>Windows请至python官网安装python3 (请使用python 3.6)</p>
+<p>注意：Windows用户请将指令python3替换为python，pip3替换为pip。</p>
+<h2 id="安装python包">安装python包</h2>
+<p>本项目依赖requests、prettytable、eventlet包，需输入:</p>
+<pre><code>pip3 install requests prettytable eventlet
+</code></pre>
+<p>来安装python包</p>
+<h2 id="macos用户如遇print错误请在mainpy开头添加如下代码">MacOS用户如遇print错误，请在main.py开头添加如下代码:</h2>
+<pre><code>import sys
+import codecs
+sys.stdout = codecs.getwriter(&quot;utf-8&quot;)(sys.stdout.detach())
+</code></pre>
+<h2 id="下载项目文件">下载项目文件</h2>
+<p>Windows用户可以直接下载本项目的压缩包并解压. 为了安装并使用此项目，您需要下载下载本项目的文件。您可使用git下载项目文件并进入项目文件夹：</p>
+<pre><code>git clone https://github.com/Spedoske/DataCenterSpeedtest-cli.git
+cd DataCenterSpeedtest-cli
+</code></pre>
+<p>执行：</p>
+<pre><code>python3 main.py --list
+</code></pre>
+<p>如果出现类似于下图的表格，恭喜您安装成功.</p>
+<table>
+<thead>
+<tr>
+<th>服务商</th>
+<th>节点位置</th>
+<th>节点编号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amazon Web Services</td>
+<td>美国 弗吉尼亚州 阿什本</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Amazon Web Services</td>
+<td>美国 俄亥俄州 都柏林</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Amazon Web Services</td>
+<td>美国 俄亥俄州 都柏林</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Amazon Web Services</td>
+<td>美国 加利福尼亚州 旧金山</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Amazon Web Services</td>
+<td>美国 俄勒冈州 波特兰</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Amazon Web Services</td>
+<td>瑞典 斯德哥尔摩省 斯德哥尔摩</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>几个简单的命令<br>
+<strong><code>--search</code></strong><br>
+允许筛选节点</p>
+<p><strong><code>--list</code></strong><br>
+显示经过筛选后的节点<br>
+例如：</p>
+<pre><code>python3 main.py --search 日本 --list
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>服务商</th>
+<th>节点位置</th>
+<th>节点编号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amazon Web Services</td>
+<td>日本 东京都 东京</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Google Cloud Platform</td>
+<td>日本 东京都 东京</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Google Cloud Platform</td>
+<td>日本 大阪府 大阪</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Linode</td>
+<td>日本 东京都 品川区</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Vultr</td>
+<td>日本 东京都 东京</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong><code>--speedtest</code></strong><br>
+允许您对筛选后的节点进行测速<br>
+例如：</p>
+<pre><code>python3 main.py --search 日本 --speedtest --list
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>服务商</th>
+<th>节点</th>
+<th>速度</th>
+<th>节点链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amazon Web Services</td>
+<td>日本 东京都 东京</td>
+<td>13.36 MB/s</td>
+<td>ap-northeast-1-ec2.cloudharmony.net</td>
+</tr>
+<tr>
+<td>Google Cloud Platform</td>
+<td>日本 东京都 东京</td>
+<td>5.82 MB/s</td>
+<td>asia-northeast1-gce.cloudharmony.net</td>
+</tr>
+<tr>
+<td>Google Cloud Platform</td>
+<td>日本 大阪府 大阪</td>
+<td>5.53 MB/s</td>
+<td>asia-northeast2-gce.cloudharmony.net</td>
+</tr>
+<tr>
+<td>Vultr</td>
+<td>日本 东京都 东京</td>
+<td>226.19 KB/s</td>
+<td>HND-JP-ping.vultr.com</td>
+</tr>
+<tr>
+<td>Linode</td>
+<td>日本 东京都 品川区</td>
+<td>21.28 KB/s</td>
+<td>speedtest.tokyo2.linode.com</td>
+</tr>
+</tbody>
+</table>
+<p>更多详细命令请观看 DataCenterSpeedtest-cli <a href="https://github.com/Spedoske/DataCenterSpeedtest-cli/wiki"><strong>WIKI</strong></a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hostloc小技巧]]></title>
         <id>https://Gunpowder-pixel.github.io/post/q56Otyp3n/</id>
