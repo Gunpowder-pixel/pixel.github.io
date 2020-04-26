@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Gunpowder-pixel.github.io</id>
     <title>太空排骨</title>
-    <updated>2020-04-26T14:10:02.578Z</updated>
+    <updated>2020-04-26T14:30:43.706Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Gunpowder-pixel.github.io"/>
     <link rel="self" href="https://Gunpowder-pixel.github.io/atom.xml"/>
@@ -10,18 +10,6 @@
     <logo>https://Gunpowder-pixel.github.io/images/avatar.png</logo>
     <icon>https://Gunpowder-pixel.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 太空排骨</rights>
-    <entry>
-        <title type="html"><![CDATA[test]]></title>
-        <id>https://Gunpowder-pixel.github.io/post/X4scIUpuS/</id>
-        <link href="https://Gunpowder-pixel.github.io/post/X4scIUpuS/">
-        </link>
-        <updated>2020-04-26T14:06:31.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>test
-test
-test
-</code></pre>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[文人怼人--鲁迅专栏]]></title>
         <id>https://Gunpowder-pixel.github.io/post/Z1Rbd8uw2/</id>
@@ -619,6 +607,17 @@ cd DataCenterSpeedtest-cli
 <h3 id="理论来说-youtube速度超过3w-就能正常流畅播放所有视频">理论来说 Youtube速度超过3W 就能正常流畅播放所有视频</h3>
 <p>数据引用于<code>eSir PlayGround</code>的视频<br>
 <a href="https://www.youtube.com/watch?v=ZcvdUFZYoDI">视频链接</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[封面生成网站]]></title>
+        <id>https://Gunpowder-pixel.github.io/post/1/</id>
+        <link href="https://Gunpowder-pixel.github.io/post/1/">
+        </link>
+        <updated>2020-04-07T15:13:42.000Z</updated>
+        <content type="html"><![CDATA[<p>在网上Gridea的TG群组里发现的一个有趣项目<br>
+<a href="https://nav.rdonly.com/laboratory/bgimage/backimage.html">项目地址</a><br>
+<a href="http://www.rdonly.com/">作者博客</a></p>
 ]]></content>
     </entry>
 </feed>
