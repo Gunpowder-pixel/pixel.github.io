@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" href="https://Gunpowder-pixel.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="&lt;b&gt;世事一场大梦，人生几度秋凉&lt;/b&gt;"><meta charset="UTF-8"><title>自签名 Trojan 搭建 | 太空排骨</title>
+<link rel="shortcut icon" href="https://Gunpowder-pixel.github.io/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="&lt;b&gt;世事一场大梦，人生几度秋凉&lt;/b&gt;"><meta charset="UTF-8"><title>Linux修改默认SSH端口与设置密钥登陆 | 太空排骨</title>
 <link href="https://Gunpowder-pixel.github.io/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://Gunpowder-pixel.github.io/media/css/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://Gunpowder-pixel.github.io/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
 <script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
 
@@ -15,7 +15,7 @@
 	gtag('config', 'UA-164371275-1');
 </script>
 
-<link rel="canonical" href="https://Gunpowder-pixel.github.io/post/27K1NUr7b/" />
+<link rel="canonical" href="https://Gunpowder-pixel.github.io/post/_5KDeX2tU/" />
 </head>
 <body>
 <div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
@@ -33,77 +33,188 @@
 
 <div class="main"><div class="main-inner"><div class="content">
 <article class="post">
-<h2 class="post_title sm_margin"><a>自签名 Trojan 搭建</a></h2>
+<h2 class="post_title sm_margin"><a>Linux修改默认SSH端口与设置密钥登陆</a></h2>
 <script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
-<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2020-04-23</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://Gunpowder-pixel.github.io/tag/xYATcDQsk/" class="tag">上网</a> | 	<a href="https://Gunpowder-pixel.github.io/tag/CAI16cryN/" class="tag">脚本</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">421字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">2 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2020-05-06</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px"></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">1142字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">5 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
 </section>
 
 <div style="display:flex">
 <div class="md_block" id="md_block">
 <div class="round-shape-one"></div>
-<p>四行代码搭建trojan</p>
-<!-- more -->
-<h1 id="服务端">服务端</h1>
-<h2 id="前期准备">前期准备</h2>
-<p>安装必要的软件</p>
-<pre><code>apt-get install curl openssl nano 
+<h2 id="修改默认端口">修改默认端口</h2>
+<h3 id="添加ssh端口">添加SSH端口</h3>
+<pre><code>vi /etc/ssh/sshd_config
+# vi打开文件后，按 I键 进入编辑模式，然后按下面的要求添加端口配置，最后按 ESC键 退出编辑模式并输入 :wq 保存并退出vi编辑器。
 </code></pre>
-<h2 id="第一行生成自签名证书">第一行，生成自签名证书</h2>
-<pre><code>openssl req -newkey rsa:2048 -nodes -keyout /etc/trojankey.pem -x509 -days 3650 -out /etc/trojancertificate.pem
+<p>我们在默认的SSH端口配置下面添加一个我们要用的新的端口，例如 <strong>23456</strong></p>
+<pre><code>Port 22
+# 默认的22端口配置，注意现在不删除这个默认的 22端口配置，避免修改后无法链接SSH
+Port 23456
+# 新添加的 23456端口配置
 </code></pre>
-<p>运行过程中一直按回车就好<br>
-<img src="https://i.loli.net/2020/04/04/48Qa5vqDkMyIf2n.png"><br>
-通过上面一行命令，能够生成两个pem，将这两个pem写到trojan配置文件里面即可。</p>
-<h2 id="第二行安装trojan">第二行，安装trojan</h2>
-<pre><code>bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)&quot;
+<p>然后我们重启SSH。</p>
+<pre><code>/etc/init.d/ssh restart
+# 如果提示服务不存在，那就用 /etc/init.d/sshd restart
+# CentOS7 则用 systemctl restart sshd.service
 </code></pre>
-<p>这行命令是下载trojan</p>
-<h2 id="第三行修改trojan配置文件">第三行，修改trojan配置文件</h2>
-<pre><code>nano /usr/local/etc/trojan/config.json
+<h3 id="测试一下">测试一下</h3>
+<p>用新端口连接测试，成功连接就可以取消默认的22端口</p>
+<h3 id="取消默认ssh端口-22">取消默认SSH端口 22</h3>
+<pre><code>vi /etc/ssh/sshd_config
 </code></pre>
-<p>替换掉<code>cert</code>和<code>key</code>，密码随意<br>
-<img src="https://i.loli.net/2020/04/04/jo7b8Btd3Dm5M9U.png"><br>
-这时候，如果用低于1080的端口，那么就需要赋予trojan监听的能力。</p>
-<p>赋予trojan监听443端口的能力</p>
-<pre><code>setcap CAP_NET_BIND_SERVICE=+eip /usr/local/bin/trojan
+<p>我们再打开SSH配置文件，删除<code>Port 22</code>这一行，然后重启SSH即可。</p>
+<pre><code>/etc/init.d/ssh restart
+# 如果提示服务不存在，那就用 /etc/init.d/sshd restart
+# CentOS7 则用 systemctl restart sshd.service
 </code></pre>
-<h2 id="第四行修改启动trojan">第四行，修改启动trojan</h2>
-<pre><code>systemctl restart trojan
+<hr>
+<h2 id="使用密钥登陆">使用密钥登陆</h2>
+<p>有公钥（authorized_keys）可以直接上传到服务器的<code>/root/.ssh</code>目录内</p>
+<p>没有<code>.ssh</code>目录的话就在/root目录下新建一个</p>
+<pre><code>mkdir /root/.ssh
 </code></pre>
-<p>如果有必要，可以设置成开机自动启动trojan</p>
-<pre><code>systemctl enable trojan
+<h3 id="配置公钥">配置公钥</h3>
+<pre><code>cd .ssh
+# 进入 .ssh 目录
+
+ls -a
+# . .. id_rsa id_rsa.pub
+# 查看当前文件夹(/root/.ssh/)下的公匙(id_rsa.pub)和私匙(id_rsa)
+
+mv id_rsa.pub authorized_keys
+# 重命名公匙(id_rsa.pub)
+
+ls -a
+# . .. authorized_keys id_rsa
+# 再查看一次当前文件夹(/root/.ssh/)下的公匙是否重命名成功
+
+chmod 600 authorized_keys
+chmod 700 ~/.ssh
+# 然后修改密匙文件的权限，避免被其他用户 修改/删除。
+# chmod 600 - 只有属主有读写权限。
+# chmod 700 - 只有属主有读、写、执行权限。
 </code></pre>
-<h1 id="服务端-2">服务端</h1>
-<p>这里以 PC 为例，Android/iOS 可以找找相应的工具</p>
-<p>同样从 GitHub Release 下载对应的文件，解压缩，把client.json-example拷贝出来<br>
-我们只需要关注local_port、remote_addr、remote_port、password和ssl的几个字段</p>
-<ul>
-<li>local_port 本地监听的端口，我这里设置为了 11080，避免和本机的 Shadowsocks 冲突</li>
-<li>remote_addr：申请的域名</li>
-<li>remote_port：上面服务端配置的端口，一般来说就是 443</li>
-<li>password：密码，要与服务端配置的密码列表中的一个相符
-<ul>
-<li>ssl：如果你使用的是自签名证书，那么verify要写 false，假如 common name 也是瞎写的，那么verify_hostname也要写 false；假如用的是真证书，那么就都 true 就可以了<br>
-<img src="https://i.loli.net/2020/04/04/81BRUtEhkHPuNlj.png"></li>
-</ul>
-</li>
-</ul>
-<p><a href="http://blog.wdjsh169.ml/index.php/archives/143/">文章转载自奇葩秋，跳转链接</a></p>
+<h3 id="配置ssh">配置SSH</h3>
+<p>开启 Key密匙登陆选项（一般默认都是开启的，确认一下）</p>
+<pre><code>vi /etc/ssh/sshd_config
+</code></pre>
+<p>打开配置文件，找到下面几个参数：</p>
+<pre><code>RSAAuthentication yes
+PubkeyAuthentication yes
+# yes 代表开启密匙登陆
+</code></pre>
+<p>一般默认都是<code>yes</code>开启的，如果不是，那就改为<code>yes</code>。</p>
+<p>然后重启SSH：</p>
+<pre><code>/etc/init.d/ssh restart# 如果这个提示没有找到服务，那么试试 /etc/init.d/sshd restart
+# CentOS7 则使用：systemctl restart sshd
+</code></pre>
+<h3 id="关闭密码登陆方式">关闭密码登陆方式</h3>
+<pre><code>vi /etc/ssh/sshd_config 
+# 默认这个参数选项就是 no，如果不是则改为 no，如果前面有 注释符# 那么就去掉 #
+PasswordAuthentication no
+</code></pre>
+<p>最后重启SSH：</p>
+<pre><code>/etc/init.d/ssh restart
+# 如果这个提示没有找到服务，那么试试 /etc/init.d/sshd restart
+</code></pre>
+<hr>
+<h3 id="提示">提示</h3>
+<p>上面是有公钥的情况下的操作，如果需要配置密钥对就先进行下面的操作</p>
+<p>首先确保你的系统安装了 openssl</p>
+<pre><code>openssl -V
+
+# 正常情况下会返回一大串内容，如果提示 -bash: openssl: command not found 则代表未安装，用下面的命令安装：
+# CentOS 系统：
+yum install openssl -y 
+
+# Debian/Ubuntu 系统
+apt-get install openssl -y
+</code></pre>
+<h3 id="生成密匙对">生成密匙对</h3>
+<p>我们执行下面这个命令，就会开始生成 ssh 密匙对(私匙+公匙)，根据下面提示来生成。</p>
+<pre><code>ssh-keygen
+</code></pre>
+<pre><code>Generating public/private rsa key pair. 
+
+Enter file in which to save the key (/root/.ssh/id_rsa):
+# 输入要保存的密匙文件位置，直接回车 默认即可
+
+Created directory '/root/.ssh'.
+
+Enter passphrase (empty for no passphrase):
+# 输入密匙的密码，可直接回车留空，也可以输入密码来进一步增强安全性(密匙+密码双重保险)
+Enter same passphrase again:
+# 重复输入一次密匙的密码 
+
+Your identification has been saved in /root/.ssh/id_rsa.
+# 你的私匙位置 /root/.ssh/id_rsa
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+# 你的公匙位置 /root/.ssh/id_rsa.pub 
+
+The key fingerprint is:
+7c:25:bd:54:f5:fc:60:c0:86:c1:a0:32:7d:8a:80:c4 root@debian
+The key's randomart image is:
++--[ RSA 2048]----+
+|        .o.+..o..|
+| o   . .  o o+ o.|
+|. E o . .  .o + o|
+| .   + +   o o o.|
+|    . . S .   . .|
+|         .       |
+|        .        |
+|                 |
+|                 |
++-----------------+
+</code></pre>
+<h2 id=""></h2>
+<h3 id="私钥取回本地">私钥取回本地</h3>
+<pre><code>cat /root/.ssh/id_rsa
+# 如果私匙生成位置不一样，自己改
+</code></pre>
+<p>首先我们读取<code>id_rsa</code>密匙文件，然后屏幕上会输出一大串的密匙，我们在本地电脑上面新建一个文本文件，并把屏幕上面的密匙复制出来写入文件内，文件取名为<code>id_rsa</code>（这个名称随意，<strong>但这个密匙文件一定要保存好！</strong>）。</p>
+<pre><code># 密匙文件就像这样 
+
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,EA47822BC49A9E56338A99D07084DA38XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+...
+...
+-----END RSA PRIVATE KEY-----
+</code></pre>
+<hr>
+<p>本文参考自<br>
+<a href="https://doubibackup.com/xq4-65xu.html">Linux 修改默认SSH端口 22，避免被暴力破解密码</a><br>
+<a href="https://doubibackup.com/gqnmhax9-2.html">Linux 更换密码登陆方式 为使用 Key密匙安全登陆，避免被暴力破解密码</a></p>
 
 <span id="footnote"></span>
 <div id = "warn"></div>
 </div>
 <div class="toc-container"><ul class="markdownIt-TOC">
-<li><a href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF">服务端</a>
+<li>
 <ul>
-<li><a href="#%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87">前期准备</a></li>
-<li><a href="#%E7%AC%AC%E4%B8%80%E8%A1%8C%E7%94%9F%E6%88%90%E8%87%AA%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6">第一行，生成自签名证书</a></li>
-<li><a href="#%E7%AC%AC%E4%BA%8C%E8%A1%8C%E5%AE%89%E8%A3%85trojan">第二行，安装trojan</a></li>
-<li><a href="#%E7%AC%AC%E4%B8%89%E8%A1%8C%E4%BF%AE%E6%94%B9trojan%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">第三行，修改trojan配置文件</a></li>
-<li><a href="#%E7%AC%AC%E5%9B%9B%E8%A1%8C%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8trojan">第四行，修改启动trojan</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3">修改默认端口</a>
+<ul>
+<li><a href="#%E6%B7%BB%E5%8A%A0ssh%E7%AB%AF%E5%8F%A3">添加SSH端口</a></li>
+<li><a href="#%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B">测试一下</a></li>
+<li><a href="#%E5%8F%96%E6%B6%88%E9%BB%98%E8%AE%A4ssh%E7%AB%AF%E5%8F%A3-22">取消默认SSH端口 22</a></li>
 </ul>
 </li>
-<li><a href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF-2">服务端</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%AF%86%E9%92%A5%E7%99%BB%E9%99%86">使用密钥登陆</a>
+<ul>
+<li><a href="#%E9%85%8D%E7%BD%AE%E5%85%AC%E9%92%A5">配置公钥</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AEssh">配置SSH</a></li>
+<li><a href="#%E5%85%B3%E9%97%AD%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86%E6%96%B9%E5%BC%8F">关闭密码登陆方式</a></li>
+<li><a href="#%E6%8F%90%E7%A4%BA">提示</a></li>
+<li><a href="#%E7%94%9F%E6%88%90%E5%AF%86%E5%8C%99%E5%AF%B9">生成密匙对</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li><a href="#%E7%A7%81%E9%92%A5%E5%8F%96%E5%9B%9E%E6%9C%AC%E5%9C%B0">私钥取回本地</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -140,7 +251,7 @@ if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop)
 var list=document.querySelectorAll(".katex");for(var i=0;i<list.length;i++){list[i].style.display="unset"};
 var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
 var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
-content="本文最后更新于2020-04-23，已超过 1 年没有更新，涉及的内容可能已经失效！";var date1="2020-04-23 19:40:22";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
+content="本文最后更新于2020-05-06，已超过 1 年没有更新，涉及的内容可能已经失效！";var date1="2020-05-06 22:04:19";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
 </script>
 <style>#magnifyImg{position:fixed;left:0;top:0;text-align:center;width:100%;display:none;z-index:9999}#magnifyImg img{object-fit:contain;background:#eaecef;padding:15px;border-radius:10px;height:auto;width:auto;vertical-align:middle}</style>
 <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">由<a href="https://gridea.dev" target="_blank">Gridea</a>驱动<!-- Copyright © 2018-2020 --><!-- <a href="https://Gunpowder-pixel.github.io" style="margin:0;">太空排骨</a> -->.</div>

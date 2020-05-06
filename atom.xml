@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Gunpowder-pixel.github.io</id>
     <title>太空排骨</title>
-    <updated>2020-05-05T15:43:24.461Z</updated>
+    <updated>2020-05-06T14:11:03.447Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Gunpowder-pixel.github.io"/>
     <link rel="self" href="https://Gunpowder-pixel.github.io/atom.xml"/>
@@ -10,6 +10,158 @@
     <logo>https://Gunpowder-pixel.github.io/images/avatar.png</logo>
     <icon>https://Gunpowder-pixel.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 太空排骨</rights>
+    <entry>
+        <title type="html"><![CDATA[Linux修改默认SSH端口与设置密钥登陆]]></title>
+        <id>https://Gunpowder-pixel.github.io/post/_5KDeX2tU/</id>
+        <link href="https://Gunpowder-pixel.github.io/post/_5KDeX2tU/">
+        </link>
+        <updated>2020-05-06T14:04:19.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="修改默认端口">修改默认端口</h2>
+<h3 id="添加ssh端口">添加SSH端口</h3>
+<pre><code>vi /etc/ssh/sshd_config
+# vi打开文件后，按 I键 进入编辑模式，然后按下面的要求添加端口配置，最后按 ESC键 退出编辑模式并输入 :wq 保存并退出vi编辑器。
+</code></pre>
+<p>我们在默认的SSH端口配置下面添加一个我们要用的新的端口，例如 <strong>23456</strong></p>
+<pre><code>Port 22
+# 默认的22端口配置，注意现在不删除这个默认的 22端口配置，避免修改后无法链接SSH
+Port 23456
+# 新添加的 23456端口配置
+</code></pre>
+<p>然后我们重启SSH。</p>
+<pre><code>/etc/init.d/ssh restart
+# 如果提示服务不存在，那就用 /etc/init.d/sshd restart
+# CentOS7 则用 systemctl restart sshd.service
+</code></pre>
+<h3 id="测试一下">测试一下</h3>
+<p>用新端口连接测试，成功连接就可以取消默认的22端口</p>
+<h3 id="取消默认ssh端口-22">取消默认SSH端口 22</h3>
+<pre><code>vi /etc/ssh/sshd_config
+</code></pre>
+<p>我们再打开SSH配置文件，删除<code>Port 22</code>这一行，然后重启SSH即可。</p>
+<pre><code>/etc/init.d/ssh restart
+# 如果提示服务不存在，那就用 /etc/init.d/sshd restart
+# CentOS7 则用 systemctl restart sshd.service
+</code></pre>
+<hr>
+<h2 id="使用密钥登陆">使用密钥登陆</h2>
+<p>有公钥（authorized_keys）可以直接上传到服务器的<code>/root/.ssh</code>目录内</p>
+<p>没有<code>.ssh</code>目录的话就在/root目录下新建一个</p>
+<pre><code>mkdir /root/.ssh
+</code></pre>
+<h3 id="配置公钥">配置公钥</h3>
+<pre><code>cd .ssh
+# 进入 .ssh 目录
+
+ls -a
+# . .. id_rsa id_rsa.pub
+# 查看当前文件夹(/root/.ssh/)下的公匙(id_rsa.pub)和私匙(id_rsa)
+
+mv id_rsa.pub authorized_keys
+# 重命名公匙(id_rsa.pub)
+
+ls -a
+# . .. authorized_keys id_rsa
+# 再查看一次当前文件夹(/root/.ssh/)下的公匙是否重命名成功
+
+chmod 600 authorized_keys
+chmod 700 ~/.ssh
+# 然后修改密匙文件的权限，避免被其他用户 修改/删除。
+# chmod 600 - 只有属主有读写权限。
+# chmod 700 - 只有属主有读、写、执行权限。
+</code></pre>
+<h3 id="配置ssh">配置SSH</h3>
+<p>开启 Key密匙登陆选项（一般默认都是开启的，确认一下）</p>
+<pre><code>vi /etc/ssh/sshd_config
+</code></pre>
+<p>打开配置文件，找到下面几个参数：</p>
+<pre><code>RSAAuthentication yes
+PubkeyAuthentication yes
+# yes 代表开启密匙登陆
+</code></pre>
+<p>一般默认都是<code>yes</code>开启的，如果不是，那就改为<code>yes</code>。</p>
+<p>然后重启SSH：</p>
+<pre><code>/etc/init.d/ssh restart# 如果这个提示没有找到服务，那么试试 /etc/init.d/sshd restart
+# CentOS7 则使用：systemctl restart sshd
+</code></pre>
+<h3 id="关闭密码登陆方式">关闭密码登陆方式</h3>
+<pre><code>vi /etc/ssh/sshd_config 
+# 默认这个参数选项就是 no，如果不是则改为 no，如果前面有 注释符# 那么就去掉 #
+PasswordAuthentication no
+</code></pre>
+<p>最后重启SSH：</p>
+<pre><code>/etc/init.d/ssh restart
+# 如果这个提示没有找到服务，那么试试 /etc/init.d/sshd restart
+</code></pre>
+<hr>
+<h3 id="提示">提示</h3>
+<p>上面是有公钥的情况下的操作，如果需要配置密钥对就先进行下面的操作</p>
+<p>首先确保你的系统安装了 openssl</p>
+<pre><code>openssl -V
+
+# 正常情况下会返回一大串内容，如果提示 -bash: openssl: command not found 则代表未安装，用下面的命令安装：
+# CentOS 系统：
+yum install openssl -y 
+
+# Debian/Ubuntu 系统
+apt-get install openssl -y
+</code></pre>
+<h3 id="生成密匙对">生成密匙对</h3>
+<p>我们执行下面这个命令，就会开始生成 ssh 密匙对(私匙+公匙)，根据下面提示来生成。</p>
+<pre><code>ssh-keygen
+</code></pre>
+<pre><code>Generating public/private rsa key pair. 
+
+Enter file in which to save the key (/root/.ssh/id_rsa):
+# 输入要保存的密匙文件位置，直接回车 默认即可
+
+Created directory '/root/.ssh'.
+
+Enter passphrase (empty for no passphrase):
+# 输入密匙的密码，可直接回车留空，也可以输入密码来进一步增强安全性(密匙+密码双重保险)
+Enter same passphrase again:
+# 重复输入一次密匙的密码 
+
+Your identification has been saved in /root/.ssh/id_rsa.
+# 你的私匙位置 /root/.ssh/id_rsa
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+# 你的公匙位置 /root/.ssh/id_rsa.pub 
+
+The key fingerprint is:
+7c:25:bd:54:f5:fc:60:c0:86:c1:a0:32:7d:8a:80:c4 root@debian
+The key's randomart image is:
++--[ RSA 2048]----+
+|        .o.+..o..|
+| o   . .  o o+ o.|
+|. E o . .  .o + o|
+| .   + +   o o o.|
+|    . . S .   . .|
+|         .       |
+|        .        |
+|                 |
+|                 |
++-----------------+
+</code></pre>
+<h2 id=""></h2>
+<h3 id="私钥取回本地">私钥取回本地</h3>
+<pre><code>cat /root/.ssh/id_rsa
+# 如果私匙生成位置不一样，自己改
+</code></pre>
+<p>首先我们读取<code>id_rsa</code>密匙文件，然后屏幕上会输出一大串的密匙，我们在本地电脑上面新建一个文本文件，并把屏幕上面的密匙复制出来写入文件内，文件取名为<code>id_rsa</code>（这个名称随意，<strong>但这个密匙文件一定要保存好！</strong>）。</p>
+<pre><code># 密匙文件就像这样 
+
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,EA47822BC49A9E56338A99D07084DA38XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+...
+...
+-----END RSA PRIVATE KEY-----
+</code></pre>
+<hr>
+<p>本文参考自<br>
+<a href="https://doubibackup.com/xq4-65xu.html">Linux 修改默认SSH端口 22，避免被暴力破解密码</a><br>
+<a href="https://doubibackup.com/gqnmhax9-2.html">Linux 更换密码登陆方式 为使用 Key密匙安全登陆，避免被暴力破解密码</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[文人怼人--鲁迅专栏]]></title>
         <id>https://Gunpowder-pixel.github.io/post/Z1Rbd8uw2/</id>
@@ -648,17 +800,6 @@ cd DataCenterSpeedtest-cli
 <p><strong>理论来说 Youtube速度超过3W 就能正常流畅播放所有视频</strong></p>
 <p>数据引用于<code>eSir PlayGround</code>的视频<br>
 <a href="https://www.youtube.com/watch?v=ZcvdUFZYoDI">视频链接</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[封面生成网站]]></title>
-        <id>https://Gunpowder-pixel.github.io/post/1/</id>
-        <link href="https://Gunpowder-pixel.github.io/post/1/">
-        </link>
-        <updated>2020-04-07T15:13:42.000Z</updated>
-        <content type="html"><![CDATA[<p>在网上Gridea的TG群组里发现的一个有趣项目<br>
-<a href="https://nav.rdonly.com/laboratory/bgimage/backimage.html">项目地址</a><br>
-<a href="http://www.rdonly.com/">作者博客</a></p>
 ]]></content>
     </entry>
 </feed>
