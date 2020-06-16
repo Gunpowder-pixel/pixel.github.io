@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Gunpowder-pixel.github.io</id>
     <title>太空排骨</title>
-    <updated>2020-05-07T06:22:26.887Z</updated>
+    <updated>2020-06-16T10:40:51.172Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Gunpowder-pixel.github.io"/>
     <link rel="self" href="https://Gunpowder-pixel.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://Gunpowder-pixel.github.io/images/avatar.png</logo>
     <icon>https://Gunpowder-pixel.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 太空排骨</rights>
+    <entry>
+        <title type="html"><![CDATA[简单的习惯]]></title>
+        <id>https://Gunpowder-pixel.github.io/post/llmf6NXVt/</id>
+        <link href="https://Gunpowder-pixel.github.io/post/llmf6NXVt/">
+        </link>
+        <updated>2020-06-16T10:40:09.000Z</updated>
+        <content type="html"><![CDATA[<hr>
+<p>谢谢⇒谢谢你<br>
+随便⇒听你的<br>
+我不会⇒我可以学<br>
+听明白了吗⇒我说明白了吗</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Linux修改默认SSH端口与设置密钥登陆]]></title>
         <id>https://Gunpowder-pixel.github.io/post/XKQgG8Go2/</id>
@@ -702,104 +715,6 @@ cd DataCenterSpeedtest-cli
 新加坡：92.223.86.2<br>
 悉尼：146.185.236.2<br>
 东京：5.188.71.3</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[看Youtube需要的速度]]></title>
-        <id>https://Gunpowder-pixel.github.io/post/2/</id>
-        <link href="https://Gunpowder-pixel.github.io/post/2/">
-        </link>
-        <updated>2020-04-20T13:47:39.000Z</updated>
-        <content type="html"><![CDATA[<table>
-<thead>
-<tr>
-<th style="text-align:center">Name</th>
-<th style="text-align:center">8K@60</th>
-<th style="text-align:center">8K@30</th>
-<th style="text-align:center">4K@60</th>
-<th style="text-align:center">4K@30</th>
-<th style="text-align:center">1080@60</th>
-<th style="text-align:center">1080@30</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">Width</td>
-<td style="text-align:center">7680</td>
-<td style="text-align:center">7680</td>
-<td style="text-align:center">3840</td>
-<td style="text-align:center">3840</td>
-<td style="text-align:center">1920</td>
-<td style="text-align:center">1920</td>
-</tr>
-<tr>
-<td style="text-align:center">Height</td>
-<td style="text-align:center">4320</td>
-<td style="text-align:center">4320</td>
-<td style="text-align:center">2160</td>
-<td style="text-align:center">2160</td>
-<td style="text-align:center">1080</td>
-<td style="text-align:center">1080</td>
-</tr>
-<tr>
-<td style="text-align:center">Depth</td>
-<td style="text-align:center">24</td>
-<td style="text-align:center">24</td>
-<td style="text-align:center">24</td>
-<td style="text-align:center">24</td>
-<td style="text-align:center">24</td>
-<td style="text-align:center">24</td>
-</tr>
-<tr>
-<td style="text-align:center">Fps</td>
-<td style="text-align:center">60</td>
-<td style="text-align:center">30</td>
-<td style="text-align:center">60</td>
-<td style="text-align:center">30</td>
-<td style="text-align:center">60</td>
-<td style="text-align:center">30</td>
-</tr>
-<tr>
-<td style="text-align:center">Bit</td>
-<td style="text-align:center">47,775,744,000</td>
-<td style="text-align:center">23,887,872,000</td>
-<td style="text-align:center">11,943,936,000</td>
-<td style="text-align:center">5,971,968,000</td>
-<td style="text-align:center">2,985,984,000</td>
-<td style="text-align:center">1,492,992,000</td>
-</tr>
-<tr>
-<td style="text-align:center">Kbps</td>
-<td style="text-align:center">46,656,000</td>
-<td style="text-align:center">23,328,000</td>
-<td style="text-align:center">11,664,000</td>
-<td style="text-align:center">5,832,000</td>
-<td style="text-align:center">2,916,000</td>
-<td style="text-align:center">1,458,000</td>
-</tr>
-<tr>
-<td style="text-align:center">Rate</td>
-<td style="text-align:center">2000</td>
-<td style="text-align:center">900</td>
-<td style="text-align:center">400</td>
-<td style="text-align:center">300</td>
-<td style="text-align:center">400</td>
-<td style="text-align:center">300</td>
-</tr>
-<tr>
-<td style="text-align:center">Kbps</td>
-<td style="text-align:center">23,328</td>
-<td style="text-align:center">25,920</td>
-<td style="text-align:center">29,160</td>
-<td style="text-align:center">19,440</td>
-<td style="text-align:center">7,290</td>
-<td style="text-align:center">4,860</td>
-</tr>
-</tbody>
-</table>
-<p><strong>理论来说 Youtube速度超过3W 就能正常流畅播放所有视频</strong></p>
-<p>数据引用于<code>eSir PlayGround</code>的视频<br>
-<a href="https://www.youtube.com/watch?v=ZcvdUFZYoDI">视频链接</a></p>
 ]]></content>
     </entry>
 </feed>
